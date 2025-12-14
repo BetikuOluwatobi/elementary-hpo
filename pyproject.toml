@@ -14,7 +14,12 @@ classifiers = [
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "numpy (>=2.3.5,<3.0.0)"
+    "numpy",
+    "scipy>=1.7.0",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn"
 ]
 
 [tool.poetry]
