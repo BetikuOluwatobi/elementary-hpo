@@ -1,5 +1,5 @@
 [project]
-name = "elementary-search"
+name = "elementary-hpo"
 version = "0.1.0"
 description = "A lightweight hyperparameter optimization tool using Sobol sequences."
 authors = [
@@ -19,11 +19,12 @@ dependencies = [
     "pandas",
     "scikit-learn",
     "matplotlib",
-    "seaborn"
+    "seaborn",
+    "pytest (>=9.0.2,<10.0.0)"
 ]
 
 [tool.poetry]
-packages = [{include = "elementary_search", from = "src"}]
+packages = [{include = "elementary_hpo", from = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

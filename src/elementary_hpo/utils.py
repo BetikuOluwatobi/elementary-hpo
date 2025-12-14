@@ -1,10 +1,17 @@
 import numpy as np
 import math
-from typing import Dict, List, Any, Union
+from typing import Dict, List, Any
 
 def map_categorical(n_iter: int, categorical_params: Dict[str, List[Any]]) -> Dict[str, np.ndarray]:
     """
     Distributes categorical choices evenly across iterations.
+
+    Args:
+        n_iter: Number of iterations/samples.
+        categorical_params: Dictionary with parameter names as keys and list of choices as values.
+
+    Returns:
+        Dictionary with parameter names as keys and numpy arrays of choices as values.
     """
     categorical_names = list(categorical_params.keys())
     grid_param = {}
@@ -23,6 +30,13 @@ def map_categorical(n_iter: int, categorical_params: Dict[str, List[Any]]) -> Di
 def map_parameters(sample_batch: np.ndarray, params_bound: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
     Maps samples from the [0, 1] unit cube to actual parameter space.
+
+    Args:
+        sample_batch: 2D numpy array of shape (n_samples, n_numerical_params) with values in [0, 1].
+        params_bound: Dictionary defining bounds (tuples for numerical, lists for categorical).
+    
+    Returns:
+        List of dictionaries, each representing a parameter configuration.
     """
     from scipy.stats import qmc # Import inside to avoid circular deps if any
     
