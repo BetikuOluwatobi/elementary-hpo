@@ -32,13 +32,13 @@ def test_optimizer_generalization():
     opt = SobolOptimizer(bounds, model_class=SVC, fixed_params={'probability': True}, random_state=1)
     
     # Run small batch
-    df = opt.optimize(X, y, n_samples=6, batch_name="SVM Test Batch", metric='accuracy', cv=3, n_jobs=1)
+    df = opt.optimize(X, y, n_samples=8, batch_name="SVM Test Batch", metric='accuracy', cv=3, n_jobs=1)
     
     assert not df.empty
     assert 'score' in df.columns
     assert 'C' in df.columns
     assert 'kernel' in df.columns
-    assert len(df) == 6
+    assert len(df) == 8
 
 def test_sobol_power_of_two_warning():
     """Test that a warning is raised when n_samples is not a power of two."""
