@@ -8,6 +8,12 @@ A lightweight hyperparameter optimization tool using Quasi-Monte Carlo (Sobol) s
 pip install elementary-hpo
 ```
 
+Using Poetry
+If you are using Poetry for your project, add it as a dependency:
+```bash
+poetry add elementary-hpo
+```
+
 ## Quick Start
 
 ### 1. Basic Usage (Random Forest)
@@ -41,12 +47,20 @@ plot_optimization_results(optimizer.results)
 plot_space_coverage(optimizer.results, x_col="n_estimators", y_col="max_depth")
 ```
 
-#### **`LICENSE`** (MIT)
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+Fork the project
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit your changes (git commit -m 'Add some AmazingFeature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+#### **`LICENSE`**
 
 ```text
-MIT License
-
-Copyright (c) 2025 Oluwatobi Betiku
-
-Permission is hereby granted, free of charge, to any person obtaining a copy...
-[Standard MIT Text]
+This project is licensed under the Apache License - see the LICENSE file for details.
