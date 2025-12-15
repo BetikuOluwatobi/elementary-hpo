@@ -1,6 +1,10 @@
 # Elementary HPO
 
-A lightweight hyperparameter optimization tool using Quasi-Monte Carlo (Sobol) sequences. This package allows you to optimize any scikit-learn compatible estimator class (e.g., `SVC`, `XGBClassifier`, `GradientBoostingRegressor`) hyperparameters efficiently by covering the search space more evenly than random search.
+Elementary-hpo is a lightweight hyperparameter optimization library built on Sobol Sequences (Quasi-Monte Carlo methods).
+
+It is designed to offer a mathematically superior alternative to Grid Search and Random Search by generating low-discrepancy sequences that cover the hyperparameter search space more evenly and efficiently. Unlike standard Random Search, `elementary-hpo` allows for sequential optimization, you can pause a search, analyze results, and generate new hyperparameter candidates that mathematically fill the "gaps" of previous runs, without redundancy.
+
+Based on concepts discussed in the research paper [Hyperparameter Optimization in Machine Learning](https://arxiv.org/abs/2410.22854). This package allows you to optimize any scikit-learn compatible estimator class (e.g., `SVC`, `XGBClassifier`, `GradientBoostingRegressor`) hyperparameters efficiently by covering the search space more evenly than random search.
 
 ## Installation
 
@@ -46,6 +50,11 @@ print(optimizer.get_best_params())
 plot_optimization_results(optimizer.results)
 plot_space_coverage(optimizer.results, x_col="n_estimators", y_col="max_depth")
 ```
+
+## Citation
+If you use this package, please consider citing the foundational paper:
+
+"Hyperparameter Optimization in Machine Learning" (2024). arXiv:2410.22854. Available at: https://arxiv.org/abs/2410.22854
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
