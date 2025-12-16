@@ -1,6 +1,6 @@
 [project]
 name = "elementary-hpo"
-version = "0.1.0"
+version = "0.1.1"
 description = "A lightweight hyperparameter optimization tool using Sobol sequences."
 authors = [
     {name = "BetikuOluwatobi",email = "betikuoluwatobi7@gmail.com"}

@@ -30,6 +30,7 @@ class SobolOptimizer:
         self.numerical_keys = [k for k, v in param_bounds.items() if isinstance(v, tuple)]
         self.d = len(self.numerical_keys)
         self.fixed_params = fixed_params or {}
+        self.model_class = model_class
         
         # Initialize Sobol Engine
         # Scramble=True allows expanding the sequence later
