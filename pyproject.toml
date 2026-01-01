@@ -35,3 +35,4 @@ build-backend = "poetry.core.masonry.api"
 [project.urls]
 Homepage = "https://github.com/BetikuOluwatobi/elementary-hpo"
 "Bug Tracker" = "https://github.com/BetikuOluwatobi/elementary-hpo/issues"
+"Documentation" = "https://medium.com/@betikuoluwatobi7/quasi-random-search-a-smarter-way-to-tune-hyperparameters-in-python-2650fe69d106"
